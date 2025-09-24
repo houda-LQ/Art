@@ -10,6 +10,7 @@ export default function PublishPage() {
     setArtworks([...artworks, { title }]);
     setTitle("");
   };
+  
 
 //   return (
 //     <div>
