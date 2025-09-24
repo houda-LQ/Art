@@ -1,13 +1,18 @@
 {
-  "works": [
-    { "id": 1, "title": "Tissage de Fès", "categoryId": 1, "region": "Fès", "city": "Fès", "image": "" }
-  ],
-  "categories": [
-    { "id": 1, "name": "Artisanat" },
-    { "id": 2, "name": "Gastronomie" }
-  ],
-  "artisans": [
-    { "id": 1, "name": "Rachid", "city": "Marrakech", "bio": "" }
-  ],
-  "events": []
+  "artworks": [
+    {
+      "id": 1,
+      "title": "Musicien Gnaoua",
+      "city": "Essaouira",
+      "category": "Musique",
+      "image": "https://example.com/gnaoua.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Tapis berbère",
+      "city": "Marrakech",
+      "category": "Artisanat",
+      "image": "https://example.com/tapis.jpg"
+    }
+  ]
 }

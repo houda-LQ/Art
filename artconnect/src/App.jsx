@@ -1,18 +1,67 @@
-import { Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import Publish from './pages/Publish'
-import Favorites from './pages/Favorites'
-import About from './pages/About'
-import Admin from './pages/Admin'
+// import React from "react";
+// import Navbar from "./components/Navbar";
+
+// export default function App() {
+//   return (
+//     <>
+//       <Navbar />
+//       {/* espace pour que le contenu ne soit pas caché par la navbar fixed */}
+//       <main className="pt-20">
+//         <div className="container mx-auto px-4">
+//           <h1 className="text-2xl font-semibold mt-8">Page de test</h1>
+//           <p className="mt-4 text-gray-700">
+//             La navbar doit être sticky, transparente avec effet blur. Vérifie en réduisant la fenêtre pour voir le menu mobile.
+//           </p>
+//         </div>
+//       </main>
+//     </>
+//   );
+// }
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Navbar from "./components/Navbar";
+// import { AppProvider } from "./context/AppContext";
+
+// import HomePage from "./pages/HomePage";
+// import PublishPage from "./pages/PublishPage";
+
+// function App() {
+//   return (
+//     <AppProvider>
+//       <Router>
+//         <Navbar />
+//         <Routes>
+//           <Route path="/" element={<HomePage />} />
+//           <Route path="/publish" element={<PublishPage />} />
+//         </Routes>
+//       </Router>
+//     </AppProvider>
+//   );
+// }
+
+// export default App;
+
+
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { AppProvider } from "./context/AppContext";
+import HomePage from "./pages/HomePage";
+import PublishPage from "./pages/PublishPage";
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/publish" element={<Publish />} />
-      <Route path="/favorites" element={<Favorites />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/admin/*" element={<Admin />} />
-    </Routes>
-  )
+    <AppProvider>
+      <Router>
+        <Navbar />
+        <main className="pt-20">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/publier" element={<PublishPage />} />
+          </Routes>
+        </main>
+      </Router>
+    </AppProvider>
+  );
 }
+
+
