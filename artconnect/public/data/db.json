@@ -1,0 +1,64 @@
+{
+  "artworks": [
+  {
+    "id": 1,
+    "title": "Tapis berbère",
+    "category": "Tapis",
+    "image": "/Tapis.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Potterie traditionnelle",
+    "category": "Céramique",
+    "image": "pot.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Bijoux amazighs",
+    "category": "Bijoux",
+    "image": "bijoux.jpeg"
+  }
+],
+"events": [
+    {
+      "id": 1,
+      "title": "Festival des Arts Amazighs",
+      "date": "2025-11-15",
+      "location": "Marrakech",
+      "image": "/festival.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Exposition de Zellige",
+      "date": "2025-12-01",
+      "location": "Fès",
+      "image": "/zellige.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "Moussem de Tan-Tan",
+      "date": "2025-05-15",
+      "location": "Tan-Tan",
+      "image": "/Tan-Tan.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Exposition de Zellige",
+      "date": "2025-12-01",
+      "location": "Fès",
+      "image": "/zellige.jpeg"
+    }
+  ],
+  "artisans": [
+    {
+      "id": 1,
+      "name": "Fatima Zahra",
+      "speciality": "Tapis berbères",
+      "month": "2025-09",  
+      "image": "/Fatima2.jpeg",
+      "bio": "Artisane experte en tissage traditionnel."
+    }
+  ]
+}
+
+

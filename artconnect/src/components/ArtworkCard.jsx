@@ -1,24 +1,26 @@
-import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import React from "react";
+import { FaHeart } from "react-icons/fa";
 
-export default function ArtworkCard({ artwork }) {
-  const { addToFavorites } = useContext(AppContext);
-
+const ArtworkCard = ({ art, onToggleFavorite, isFavorite }) => {
   return (
-    <div className="bg-white shadow rounded-lg p-4">
+    <div className="bg-white shadow-lg rounded-xl p-4 relative">
       <img
-        src={artwork.image}
-        alt={artwork.title}
-        className="w-full h-48 object-cover rounded"
+        src={art.image}
+        alt={art.title}
+        className="w-full h-40 object-cover rounded-md"
       />
-      <h3 className="text-lg font-bold mt-2">{artwork.title}</h3>
-      <p className="text-[#948C85]">{artwork.city} - {artwork.category}</p>
+      <h3 className="text-lg font-bold mt-2">{art.title}</h3>
+      <p className="text-gray-500">{art.category}</p>
+
+      {/* Icône favoris */}
       <button
-        onClick={() => addToFavorites(artwork)}
-        className="mt-3 bg-red-600 text-white px-4 py-2 rounded-lg"
+        onClick={() => onToggleFavorite(art)}
+        className="absolute top-2 right-2 text-red-500"
       >
-        ❤️ Ajouter aux favoris
+        <FaHeart color={isFavorite ? "red" : "gray"} />
       </button>
     </div>
   );
-}
+};
+
+export default ArtworkCard;

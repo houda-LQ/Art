@@ -1,25 +1,31 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-export default function SearchBar({ onSearch }) {
+const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState("");
 
-  const handleSearch = (e) => {
-    e.preventDefault();
+  const handleClick = () => {
     onSearch(query);
   };
 
   return (
-    <form onSubmit={handleSearch} className="flex justify-center mt-6">
-      <input
-        type="text"
-        placeholder="Recherchez par mot-clé ou catégorie..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="border rounded-l-lg px-4 py-2 w-80 focus:outline-none"
-      />
-      <button type="submit" className="bg-red-600 text-white px-4 py-2 rounded-r-lg">
-        Rechercher
-      </button>
-    </form>
+    <div className="flex justify-center mb-8">
+      <div className="bg-white shadow-lg rounded-xl p-4 flex w-[600px]">
+        <input
+          type="text"
+          placeholder="Rechercher une oeuvre, artisan ou région..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="border flex-1 rounded-l-lg px-4 py-2 focus:outline-none"
+        />
+        <button
+          onClick={handleClick}
+          className="bg-[#C4302B] text-white px-6 py-2 rounded-r-lg hover:bg-red-700 transition"
+        >
+          Rechercher
+        </button>
+      </div>
+    </div>
   );
-}
+};
+
+export default SearchBar;
