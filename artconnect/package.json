@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-  "server": "json-server --watch public/data/db.json --port 4000"
-  },
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "client": "vite",
+  "server": "json-server --watch db.json --port 4000"
+},
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
     "axios": "^1.12.2",
