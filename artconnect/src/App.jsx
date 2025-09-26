@@ -24,6 +24,7 @@ function App() {
             <Route path="/favoris" element={<FavoritesPage />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/a-propos" element={<AboutPage />} />
+
           </Routes>
         </main>
 

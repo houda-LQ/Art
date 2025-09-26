@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
 
+
 const ArtworkCard = ({ art, onToggleFavorite, isFavorite }) => {
   return (
     <div className="bg-white shadow-lg rounded-xl p-4 relative">
@@ -19,6 +20,8 @@ const ArtworkCard = ({ art, onToggleFavorite, isFavorite }) => {
       >
         <FaHeart color={isFavorite ? "red" : "gray"} />
       </button>
+    
+
     </div>
   );
 };
